@@ -77,7 +77,7 @@ async function main() {
         await page.waitForSelector('[id="chat-toggle-button"]');
         await page.click('[id="chat-toggle-button"]', {waitUntil: 'domcontentloaded'});
         await page.click('button[aria-label="Users and messages toggle"]', {waitUntil: 'domcontentloaded'});
-        await page.$eval('[class^=navbar]', element => element.style.display = "none");
+        // await page.$eval('[class^=navbar]', element => element.style.display = "none");
 
         await page.$eval('.Toastify', element => element.style.display = "none");
         await page.waitForSelector('button[aria-label="Change/Leave audio"]');
